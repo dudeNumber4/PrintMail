@@ -1,0 +1,5 @@
+project:
+  name: PrintMail
+  tz: America/Denver
+  adrFolder: ./docs/adr
+  packages: []
