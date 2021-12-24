@@ -1,0 +1,12 @@
+﻿using static System.Console;
+using System.Threading.Tasks;
+using Grpc.Net.Client;
+using PrintProcessClient;
+
+// The port number must match the port of the gRPC server.
+using var channel = GrpcChannel.ForAddress("https://localhost:5001");
+var client = new Greeter.GreeterClient(channel);
+var reply = await client.SayHelloAsync(new HelloRequest { Name = "GreeterClient" });
+WriteLine("Greeting: " + reply.Message);
+WriteLine("Press any key to exit...");
+ReadKey();

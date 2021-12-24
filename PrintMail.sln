@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcService", "GrpcService\GrpcService.csproj", "{7FBCA335-E6F7-47D8-A55C-E012A0FCF988}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintProcessService", "PrintProcessService\PrintProcessService.csproj", "{7FBCA335-E6F7-47D8-A55C-E012A0FCF988}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcGreeterClient", "GrpcGreeterClient\GrpcGreeterClient.csproj", "{803BBFCE-46A2-4BF6-B8CD-80EA6E0FD3B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintProcessClient", "PrintProcessClient\PrintProcessClient.csproj", "{803BBFCE-46A2-4BF6-B8CD-80EA6E0FD3B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
