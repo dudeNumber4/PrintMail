@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Data\\Crap\\GrpcService\\GrpcGreeterClient\\GrpcGreeterClient.csproj": {}
+    "C:\\Data\\SideProjects\\PrintMail\\GrpcGreeterClient\\GrpcGreeterClient.csproj": {}
   },
   "projects": {
-    "C:\\Data\\Crap\\GrpcService\\GrpcGreeterClient\\GrpcGreeterClient.csproj": {
+    "C:\\Data\\SideProjects\\PrintMail\\GrpcGreeterClient\\GrpcGreeterClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Data\\Crap\\GrpcService\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
+        "projectUniqueName": "C:\\Data\\SideProjects\\PrintMail\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
         "projectName": "GrpcGreeterClient",
-        "projectPath": "C:\\Data\\Crap\\GrpcService\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
+        "projectPath": "C:\\Data\\SideProjects\\PrintMail\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
         "packagesPath": "C:\\Users\\bwood\\.nuget\\packages\\",
-        "outputPath": "C:\\Data\\Crap\\GrpcService\\GrpcGreeterClient\\obj\\",
+        "outputPath": "C:\\Data\\SideProjects\\PrintMail\\GrpcGreeterClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -699,11 +699,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Data\\Crap\\GrpcService\\GrpcService\\GrpcService.csproj",
+      "projectUniqueName": "C:\\Data\\SideProjects\\PrintMail\\GrpcService\\GrpcService.csproj",
       "projectName": "GrpcService",
-      "projectPath": "C:\\Data\\Crap\\GrpcService\\GrpcService\\GrpcService.csproj",
+      "projectPath": "C:\\Data\\SideProjects\\PrintMail\\GrpcService\\GrpcService.csproj",
       "packagesPath": "C:\\Users\\bwood\\.nuget\\packages\\",
-      "outputPath": "C:\\Data\\Crap\\GrpcService\\GrpcService\\obj\\",
+      "outputPath": "C:\\Data\\SideProjects\\PrintMail\\GrpcService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

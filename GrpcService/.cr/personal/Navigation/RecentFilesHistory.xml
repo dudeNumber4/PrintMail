@@ -2,7 +2,7 @@
 <Root Type="DevExpress.CodeRush.Foundation.Navigation.QuickFileNav.SolutionFileInfosContainer">
   <Options Language="Neutral">
     <Items>
-      <Item Id="{2ac11850-6610-44f0-a049-05bb30e428bb}">
+      <Item Id="{ebe673cf-3028-4e1e-82f3-74e6e5c25259}">
         <Filename>Startup.cs</Filename>
         <FilePath>c:\data\crap\grpcservice\grpcservice\startup.cs</FilePath>
         <Folders />

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ICJzVKgV72+dNcUlFll6IQuLLGke8nNcEhwDEumzg4ab4TI8zC+EydYG5i2G1ggQSo4/HaQ5eB4m5ZJInweM6A==",
+  "dgSpecHash": "fVSelQKuFFIhZYxYne2/A2A75Nax+e9biplXD1SNhPKLt0V52wYcqggizx5YH4UQzKPKkELZjDpFTkYJdKVkmw==",
   "success": true,
-  "projectFilePath": "C:\\Data\\Crap\\GrpcService\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
+  "projectFilePath": "C:\\Data\\SideProjects\\PrintMail\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bwood\\.nuget\\packages\\google.protobuf\\3.19.1\\google.protobuf.3.19.1.nupkg.sha512",
     "C:\\Users\\bwood\\.nuget\\packages\\grpc.core.api\\2.41.0\\grpc.core.api.2.41.0.nupkg.sha512",
