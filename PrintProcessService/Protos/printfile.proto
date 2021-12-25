@@ -2,20 +2,20 @@ syntax = "proto3";
 
 option csharp_namespace = "PrintProcessService";
 
-package greet;
+package printfile;
 
-// The greeting service definition.
-service Greeter {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply);
+// The service definition.
+service PrintFileProcessor {
+  // Sends a file name (well known location)
+  rpc Process (FileRequest) returns (FileReply);
 }
 
 // The request message containing the user's name.
-message HelloRequest {
+message FileRequest {
   string name = 1;
 }
 
 // The response message containing the greetings.
-message HelloReply {
+message FileReply {
   string message = 1;
 }
