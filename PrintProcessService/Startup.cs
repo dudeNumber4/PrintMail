@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using MediatR;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PrintMailDomain;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PrintProcessService
 {
@@ -17,6 +17,7 @@ namespace PrintProcessService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
+            services.AddMediatR(typeof(PrintFileProcessorService), typeof(PrintFileEntity));  // type from each assembly using mediatr
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
