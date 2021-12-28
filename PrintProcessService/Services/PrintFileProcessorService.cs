@@ -1,7 +1,7 @@
 using Grpc.Core;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using PrintMailNotifications;
+using PrintMailDto;
 using System;
 using System.Collections.Generic;
 using System.Linq;

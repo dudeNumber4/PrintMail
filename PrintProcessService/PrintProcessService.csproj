@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PrintMailDomain\PrintMailDomain.csproj" />
-    <ProjectReference Include="..\PrintMailNotifications\PrintMailNotifications.csproj" />
+    <ProjectReference Include="..\PrintMailNotifications\PrintMailDto.csproj" />
   </ItemGroup>
 
 </Project>

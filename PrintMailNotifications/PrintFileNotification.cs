@@ -1,11 +1,10 @@
 ﻿using MediatR;
 using System;
 
-namespace PrintMailNotifications
+namespace PrintMailDto
 {
-    public class PrintFileNotification : INotification
+    public record PrintFileNotification(string fileName) : INotification
     {
-        private FileName _fileName;
-        public PrintFileNotification(string fileName) => _fileName = new FileName(fileName);
+        public FileName DTO => new FileName(fileName);
     }
 }

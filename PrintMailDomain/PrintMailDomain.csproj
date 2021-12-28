@@ -9,7 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PrintMailNotifications\PrintMailNotifications.csproj" />
+    <ProjectReference Include="..\PrintMailNotifications\PrintMailDto.csproj" />
+    <ProjectReference Include="..\PrintMailStore\PrintMailStore.csproj" />
   </ItemGroup>
 
 </Project>

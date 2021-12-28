@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintMailDomain", "PrintMai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintMailStore", "PrintMailStore\PrintMailStore.csproj", "{8AD6D080-13BD-4F59-A794-77744ECBDB17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintMailNotifications", "PrintMailNotifications\PrintMailNotifications.csproj", "{68285DAF-AC5B-4AF1-95FB-C084996E0C2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintMailDto", "PrintMailNotifications\PrintMailDto.csproj", "{68285DAF-AC5B-4AF1-95FB-C084996E0C2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
