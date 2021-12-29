@@ -35,7 +35,7 @@ namespace PrintMailStore
             return readModel.Apply();
         }
 
-        /// ToDo: plug into DI
+        /// ToDo: see Startup; is added to container, other objects in the object graph would have to additionally be added
         private static IReadModel GetReadModelInstance() => new PrintMailFileReadModel();
 
     }

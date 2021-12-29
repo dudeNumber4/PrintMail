@@ -19,6 +19,7 @@ namespace PrintProcessService
         {
             services.AddGrpc();
             services.AddMediatR(typeof(PrintFileProcessorService), typeof(PrintFileEntity));  // type from each assembly using mediatr
+            services.AddSingleton<IReadModel>(new PrintMailFileReadModel());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
