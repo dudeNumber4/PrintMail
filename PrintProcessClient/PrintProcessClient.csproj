@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PrintMailNotifications\PrintMailDto.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Protobuf Include="Protos\printfile.proto" GrpcServices="Client" />
   </ItemGroup>
 

@@ -14,15 +14,15 @@ namespace PrintMailDomain
     public class FileChannerWriter
     {
 
-        private readonly Channel<FileName> _channel = Channel.CreateUnbounded<FileName>();
-        public Channel<FileName> ChannelForReading => _channel;
+        private readonly Channel<PrintFileInstance> _channel = Channel.CreateUnbounded<PrintFileInstance>();
+        public Channel<PrintFileInstance> ChannelForReading => _channel;
 
         /// <summary>
         /// Would write file stream to channel.
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        public bool TryWrite(FileName item) => _channel.Writer.TryWrite(item);
+        public bool TryWrite(PrintFileInstance item) => _channel.Writer.TryWrite(item);
 
         /// <summary>
         /// Would normally ensure channel ready.

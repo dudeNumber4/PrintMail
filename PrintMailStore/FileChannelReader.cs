@@ -13,12 +13,12 @@ namespace PrintMailStore
     internal class FileChannelReader
     {
 
-        private readonly Channel<FileName> _channel;
+        private readonly Channel<PrintFileInstance> _channel;
 
-        public FileChannelReader(Channel<FileName> channel) => _channel = channel;
+        public FileChannelReader(Channel<PrintFileInstance> channel) => _channel = channel;
 
-        // Would read stream
-        public async Task<FileName> TryRead()
+        // ToDo: utilize the channel to pass stream
+        public async Task<PrintFileInstance> TryRead()
         {
             try
             {

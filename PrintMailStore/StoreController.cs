@@ -1,9 +1,7 @@
 ﻿using PrintMailDto;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
@@ -13,18 +11,32 @@ namespace PrintMailStore
     public static class StoreController
     {
 
-        public static async Task ReadFile(Channel<FileName> channel)
+        public static async Task ReadFile(Channel<PrintFileInstance> channel)
         {
             var reader = new FileChannelReader(channel);
             while (!reader.ReadyToRead())
                 ;   //  ToDo: add timeout with log/return
-            var result = await reader.TryRead();
-            // Would pass stream to ORM.
+            PrintFileInstance result = await reader.TryRead();
             if (result == null)
-                Debug.Print($"Error Processing file {result.name}");
+                Debug.Print($"Error Processing file {result.FilePath}");
             else
-                Debug.Print($"File {result.name} processed");
+            {
+                if (Persist(result))
+                    Debug.Print($"File [{result.FilePath}] processed");
+                else
+                    Debug.Print($"Unable to process file: [{result.FilePath}]");
+            }
         }
+
+        private static bool Persist(PrintFileInstance instance)
+        {
+            var readModel = GetReadModelInstance();
+            (readModel as PrintMailFileReadModel).FileInstance = instance;
+            return readModel.Apply();
+        }
+
+        /// ToDo: plug into DI
+        private static IReadModel GetReadModelInstance() => new PrintMailFileReadModel();
 
     }
 

@@ -11,7 +11,6 @@ namespace PrintMailDomain
 
     public class PrintFileEntity: INotificationHandler<PrintFileNotification>
     {
-        public const string FILE_LOCATION = @"C:\temp\PrintMailFiles";
 
         public async Task Handle(PrintFileNotification notification, CancellationToken cancellationToken)
             => await WriteFileAsync(notification.DTO, cancellationToken);
@@ -21,14 +20,33 @@ namespace PrintMailDomain
             var channelWriter = new FileChannerWriter();
             while (await channelWriter.WaitToWriteAsync(cancellationToken))
             {
-                if (channelWriter.TryWrite(fileName))
+                var instance = GetInstance(fileName.name);
+                if (channelWriter.TryWrite(instance))
                 {
+                    // pass to storage layer
                     await StoreController.ReadFile(channelWriter.ChannelForReading);
+                    // ToDo: notifications would be another consumer of the channel.
+                    var notifier = GetNotifier();
+                    notifier.Configure(instance);
+                    notifier.Notify();
                     return;
                 }
             }
 
             throw new Exception("Unable to write file to channel");
         }
+
+        private PrintFileInstance GetInstance(string filePath)
+        {
+            var fileProcessor = new PrintMailFileProcessor();
+            var recordProcessor = new PrintMailRecordProcessor();
+            fileProcessor.Process();
+            var recordCollection = recordProcessor.Records;
+            return new PrintFileInstance(fileProcessor.FileSize, filePath, recordCollection.Count);
+        }
+
+        // ToDo: plug into DI
+        private IPrintFileInstanceNotifier GetNotifier() => new StubPrintFileInstanceNotifier();
+
     }
 }
