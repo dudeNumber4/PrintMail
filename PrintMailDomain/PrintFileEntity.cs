@@ -20,7 +20,7 @@ namespace PrintMailDomain
             var channelWriter = new FileChannerWriter();
             while (await channelWriter.WaitToWriteAsync(cancellationToken))
             {
-                var instance = GetInstance(fileName.name);
+                var instance = GetInstance(fileName.Path);
                 if (channelWriter.TryWrite(instance))
                 {
                     // pass to storage layer
@@ -39,9 +39,9 @@ namespace PrintMailDomain
         private PrintFileInstance GetInstance(string filePath)
         {
             var fileProcessor = new PrintMailFileProcessor();
-            var recordProcessor = new PrintMailRecordProcessor();
+            fileProcessor.FilePath = filePath;
             fileProcessor.Process();
-            var recordCollection = recordProcessor.Records;
+            var recordCollection = fileProcessor.Records;
             return new PrintFileInstance(fileProcessor.FileSize, filePath, recordCollection.Count);
         }
 

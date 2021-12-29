@@ -5,11 +5,8 @@ using PrintProcessClient;
 using System;
 using System.IO;
 
-Console.WriteLine("Waiting for file to process");
-while (PrintMailFolderWatcher.FileName == string.Empty)
-{
-    await Task.Delay(1000);
-}
+Console.WriteLine("Waiting for file to process...");
+PrintMailFolderWatcher.Watch();
 
 using var channel = GrpcChannel.ForAddress("https://localhost:5001");
 var client = new PrintFileProcessor.PrintFileProcessorClient(channel);

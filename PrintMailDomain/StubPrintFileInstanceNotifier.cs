@@ -31,7 +31,7 @@ namespace PrintMailDomain
         {
             Debug.Assert(!string.IsNullOrEmpty(_transmission));
             return $"PrintMail File Processed:{Environment.NewLine}Transmission: {_transmission}" +
-                   $"{Environment.NewLine}Record Count: {_recordCount}{Environment.NewLine}Time: {_notificationTime.ToShortTimeString()}{Environment.NewLine}" +
+                   $"{Environment.NewLine}Record Count: {_recordCount}{Environment.NewLine}Time: {_notificationTime.ToLongTimeString()}{Environment.NewLine}" +
                    $"Mailed to ${_emailAddress}";
         }
     }

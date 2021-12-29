@@ -10,26 +10,27 @@ namespace PrintMailDomain
     {
         // actual records within the data file
         private StringCollection _records = new StringCollection();
+        private readonly PrintMailRecordProcessor _recordProcessor = new PrintMailRecordProcessor();
 
         public string FilePath { internal get; set; }
         public int FileSize { get; internal set; }
+        public PrintMailFileCollection Records => _recordProcessor.Records;
 
         public PrintMailFileCollection Process()
         {
             Debug.Assert(!string.IsNullOrEmpty(FilePath));
             FileSize = File.ReadAllBytes(FilePath).Length; // ToDo move this into InitialSplit when that is no longer stubbed
             var records = InitialSplit();
-            var recordProcessor = new PrintMailRecordProcessor();
             try
             {
-                recordProcessor.Process(records);
+                _recordProcessor.Process(records);
             }
             catch (Exception ex)
             {
                 // ToDo: log
                 Debug.Print($"Error processing records: {ex.Message}");
             }
-            return recordProcessor.Records;
+            return _recordProcessor.Records;
         }
 
         private StringCollection InitialSplit()
